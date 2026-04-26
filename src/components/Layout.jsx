@@ -29,22 +29,29 @@ export default function Layout() {
       {/* Header / Navigation */}
       <header className="sticky top-0 z-50 bg-[#0f172a] shadow-md border-b border-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-20 gap-2 sm:gap-4">
             {/* Logo */}
-            <div className="flex-shrink-0 flex items-center bg-white/10 p-1 rounded-xl backdrop-blur-sm">
+            <div className="flex-shrink-0 flex items-center bg-white/10 p-1 rounded-xl backdrop-blur-sm relative z-10">
               <NavLink to="/">
-                <img className="h-14 w-auto object-contain" src={logoUrl} alt="Radha Vrindavan Bihari Logo" />
+                <img className="h-14 w-auto object-contain transition-transform duration-300 hover:scale-105" src={logoUrl} alt="Gaur Nitai Home Logo" />
               </NavLink>
             </div>
 
+            {/* Center Title */}
+            <div className="flex-1 flex justify-center min-w-0">
+              <span className="text-white font-serif font-bold text-lg sm:text-2xl tracking-wide truncate">
+                Gaur Nitai Home
+              </span>
+            </div>
+
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex space-x-6">
+            <nav className="hidden lg:flex space-x-6 flex-shrink-0">
               {navLinks.map((link) => (
                 <NavLink
                   key={link.path}
                   to={link.path}
                   className={({ isActive }) =>
-                    `text-sm font-medium transition-colors duration-200 ${
+                    `text-sm font-medium transition-colors duration-200 whitespace-nowrap ${
                       isActive
                         ? 'text-[#ffc107] border-b-2 border-[#ffc107] pb-1'
                         : 'text-gray-300 hover:text-[#ffc107]'
@@ -57,14 +64,14 @@ export default function Layout() {
               <a
                 href="#contact"
                 onClick={handleContactClick}
-                className="text-sm font-medium text-gray-300 hover:text-[#ffc107] transition-colors duration-200 cursor-pointer"
+                className="text-sm font-medium text-gray-300 hover:text-[#ffc107] transition-colors duration-200 cursor-pointer whitespace-nowrap"
               >
                 Contact Us
               </a>
             </nav>
 
             {/* Mobile menu button */}
-            <div className="lg:hidden flex items-center">
+            <div className="lg:hidden flex items-center flex-shrink-0">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="text-gray-300 hover:text-[#ffc107] focus:outline-none p-2 rounded-md transition-colors"
