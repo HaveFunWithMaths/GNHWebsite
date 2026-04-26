@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+
+@theme {
+  --color-saffron-50: #fff9ed;
+  --color-saffron-100: #fff0d4;
+  --color-saffron-200: #ffdeb0;
+  --color-saffron-300: #ffc481;
+  --color-saffron-400: #ffa248;
+  --color-saffron-500: #fe871f;
+  --color-saffron-600: #f06a0c;
+  --color-saffron-700: #c7510d;
+  --color-saffron-800: #9d4013;
+  --color-saffron-900: #7e3613;
+  --color-maroon-50: #fdf3f4;
+  --color-maroon-100: #fbe5e8;
+  --color-maroon-200: #f7ced5;
+  --color-maroon-300: #f0aab5;
+  --color-maroon-400: #e57a8e;
+  --color-maroon-500: #d54e68;
+  --color-maroon-600: #b9334d;
+  --color-maroon-700: #9c273e;
+  --color-maroon-800: #822436;
+  --color-maroon-900: #6f2231;
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-[#faf9f6] text-gray-800;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.masonry-grid {
+  columns: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    columns: 3;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
