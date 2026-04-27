@@ -7,10 +7,10 @@ import groupPhotoImg from '../assets/images/Home/GroupPhoto.jpeg';
 import { Users, Utensils, BookOpen, HeartHandshake } from 'lucide-react';
 
 const stats = [
-  { label: 'Devotees Touched', value: '50,000', icon: Users, color: 'text-saffron-500' },
-  { label: 'Prasadam Distributed', value: '10,000 Plates', icon: Utensils, color: 'text-maroon-500' },
-  { label: 'Books Distributed', value: '2,000 Books', icon: BookOpen, color: 'text-saffron-600' },
-  { label: 'Community Service', value: '10,000 Hours', icon: HeartHandshake, color: 'text-maroon-600' },
+  { label: 'People Touched', value: '2,000+', icon: Users, color: 'text-saffron-500' },
+  { label: 'Prasadam Distributed', value: '3,000+ Plates', icon: Utensils, color: 'text-maroon-500' },
+  { label: 'Spriritual Books Distributed', value: '1,000+ Books', icon: BookOpen, color: 'text-saffron-600' },
+  { label: 'Ramayana Sessions Conducted', value: '70+', icon: HeartHandshake, color: 'text-maroon-600' },
 ];
 
 const members = [
